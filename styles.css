@@ -1,1 +1,239 @@
 /* your code here */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* Footer */
+footer {
+    background: #000;
+    width: 100%;
+    color: #fff;
+}
+
+/* Main Content */
+footer .content {
+    max-width: 1250px;
+    margin: auto;
+    padding: 30px 40px 50px;
+}
+
+/* Logo and Social Icons */
+footer .content .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+
+.logo-details .logo_name {
+    font-size: 32px;
+    color: #fff;
+}
+
+/* Social Media Icons */
+.media-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.media-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.media-icons a:nth-child(1) {
+    background: #4267B2;
+}
+
+.media-icons a:nth-child(2) {
+    background: #1DA1F2;
+}
+
+.media-icons a:nth-child(3) {
+    background: #E1306C;
+}
+
+.media-icons a:nth-child(4) {
+    background: #0077B5;
+}
+
+.media-icons a:nth-child(5) {
+    background: #FF0000;
+}
+
+.media-icons a:hover {
+    transform: translateY(-4px);
+    opacity: 0.85;
+}
+
+/* Footer Columns */
+footer .content .link-boxes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+footer .content .link-boxes .box {
+    list-style: none;
+    min-width: 150px;
+}
+
+.link-boxes .box .link_name {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 18px;
+    position: relative;
+}
+
+.link-boxes .box .link_name::before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    height: 2px;
+    width: 30px;
+    background: #fff;
+}
+
+.link-boxes .box li {
+    margin: 10px 0;
+    list-style: none;
+}
+
+.link-boxes .box li a {
+    color: #bdbdbd;
+    font-size: 17px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link-boxes .box li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Bottom Copyright Section */
+.bottom-details {
+    width: 100%;
+    background: #2c303a;
+}
+
+.bottom-details .bottom_text {
+    max-width: 1250px;
+    margin: auto;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.bottom_text,
+.bottom_text a {
+    color: #bdbdbd;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.bottom_text a:hover {
+    color: #fff;
+}
+
+/* Tablet Responsive */
+@media screen and (max-width: 900px) {
+    footer .content {
+        padding: 30px 25px 40px;
+    }
+
+    footer .content .top {
+        margin-bottom: 50px;
+    }
+
+    footer .content .link-boxes {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px;
+    }
+
+    .media-icons {
+        gap: 10px;
+    }
+
+    .media-icons a {
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+    }
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 550px) {
+    footer .content {
+        padding: 25px 20px 35px;
+    }
+
+    footer .content .top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+
+    .logo-details .logo_name {
+        font-size: 30px;
+    }
+
+    .media-icons {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .media-icons a {
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+    }
+
+    footer .content .link-boxes {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .link-boxes .box .link_name {
+        font-size: 20px;
+    }
+
+    .link-boxes .box li a {
+        font-size: 16px;
+    }
+
+    .bottom-details .bottom_text {
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 14px;
+    }
+
+    .bottom_text,
+    .bottom_text a {
+        font-size: 14px;
+    }
+}
